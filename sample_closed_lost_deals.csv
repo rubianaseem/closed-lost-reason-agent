@@ -1,0 +1,9 @@
+deal_id,deal_name,company,owner,amount,stage_at_loss,created_date,close_date,last_activity_date,contacts_engaged,lost_reason,lost_reason_notes,competitor
+D-1001,Northwind Analytics - Revenue Platform,Northwind Analytics,Jordan Patel,48000,Negotiation,2026-05-04,2026-09-12,2026-09-10,4,Price,"Went with Gong. Their bundle included forecasting and we couldn't match on packaging.",
+D-1002,Lumen SaaS - Team Plan,Lumen SaaS,Priya Shah,22000,Demo,2026-06-01,2026-09-20,2026-07-15,1,Other,,
+D-1003,Brightpath - Enterprise,Brightpath,Jordan Patel,65000,Evaluation,2026-04-18,2026-09-25,2026-08-22,1,Timing,"Our champion Sarah (VP Revenue) left the company in August. New VP wants to revisit next year.",
+D-1004,Fernway - Starter,Fernway,Marcus Lee,18000,Discovery,2026-07-02,2026-09-05,2026-09-01,2,Budget,"Budget frozen until FY27 after a hiring freeze. They still like what they saw.",
+D-1005,Kestrel Logistics - Enterprise,Kestrel Logistics,Marcus Lee,90000,Legal/Procurement,2026-03-10,2026-09-29,2026-09-27,5,Product fit,"Security review failed: no SOC 2 Type II report yet and no SSO on the tier they wanted.",
+D-1006,Orbital Health - Growth,Orbital Health,Priya Shah,30000,Proposal,2026-05-20,2026-09-18,2026-09-15,2,Other,"No decision. They decided to keep doing it in spreadsheets for now.",
+D-1007,Halcyon Retail - Growth,Halcyon Retail,Jordan Patel,12000,Negotiation,2026-06-11,2026-09-08,2026-09-06,3,Lost to competitor,"Clari came in 30% cheaper and was already integrated with their Salesforce.",Clari
+D-1008,Quill & Co - Team Plan,Quill & Co,Priya Shah,40000,Demo,2026-06-25,2026-09-30,2026-08-02,1,Price,"Stopped replying after the pricing call. 3 follow ups, no answer.",
