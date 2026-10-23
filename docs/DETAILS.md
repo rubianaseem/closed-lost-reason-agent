@@ -13,7 +13,7 @@ This agent reads your closed-lost export from HubSpot or Salesforce, compares th
 If you can create a repo but aren't sure where you actually *run* this, here's the whole flow in order:
 
 1. **GitHub** is where the code lives. Copy it to your laptop with `git clone https://github.com/rubianaseem/closed-lost-reason-agent.git`, or click **Code → Download ZIP** and unzip it.
-2. **Terminal** (Mac Terminal, or the terminal inside Cursor) is where you run the script on your closed-lost CSV export. Set it up once, then run `python agent.py --input your_export.csv` (see [Quick start](../README.md#-quick-start)).
+2. **Terminal** (Mac Terminal, or the terminal inside Cursor) is where you run the script on your closed-lost CSV export. Set it up once, then run `python agent.py --input your_export.csv` (see [Quick start](../README.md#quick-start)).
 3. **Claude is optional.** With no API key the agent uses its built-in rules. If you add an Anthropic API key to `.env`, it asks Claude to classify each deal and write the summary, which handles messy notes better. It still runs in the terminal. You don't open the Claude app or paste anything into a chat.
 4. **You, then your CRM.** Open `out/closed_lost_report.md` and `out/closed_lost_audit.csv`, check the mismatches, and take the report to pipeline review. If you want the audited reason in your CRM, import `out/import_audited_reasons.csv` into HubSpot or Salesforce yourself (steps in [SETUP.md](../SETUP.md#5-optional-put-the-audited-reason-back-in-your-crm)).
 
@@ -147,12 +147,12 @@ Fix the field:
 
 The same results land in `out/closed_lost_report.md` as tables you can paste into a pipeline review doc or Notion.
 
-## 💷 Cost (estimate)
+## Cost (estimate)
 
 - **Without an API key:** free. It's plain Python running on your laptop.
 - **With `ANTHROPIC_API_KEY`:** one short Claude call per deal plus one for the summary. My rough estimate, based on [Anthropic's list pricing](https://platform.claude.com/docs/en/about-claude/pricing) for Claude Sonnet 5.5 ($2 per million input tokens, $10 per million output tokens) and about 700 input and 150 output tokens per deal, is a fraction of a cent per deal: a few US cents for the 8-deal sample, and somewhere around $1-2 for 500 deals. I haven't measured this on a large real export, so treat it as a ballpark. `--max-llm-deals` (default 200) caps how many deals go to Claude in one run; the rest use the rules.
 
-## 🔁 Stack swap table
+## Stack swap table
 
 | Layer | In this repo | Swap for |
 |---|---|---|
@@ -163,7 +163,7 @@ The same results land in `out/closed_lost_report.md` as tables you can paste int
 | Output | Local CSV + Markdown | HubSpot custom property via import, Salesforce Data Loader update, a Slack digest, a Notion page |
 | Orchestration | You run it | n8n, Zapier or Make on a weekly or end-of-quarter schedule |
 
-## 🛠 Customise it for your stack
+## Customise it for your stack
 
 Everything you'll want to tune is at the top of `agent.py`:
 
@@ -176,7 +176,7 @@ Everything you'll want to tune is at the top of `agent.py`:
 - **`LATE_STAGES`:** your stage names, so late-stage losses are marked correctly
 - **Currency:** the report uses £. Change `money()` if you report in another currency.
 
-## 🧭 How this runs today (and what production would add)
+## How this runs today (and what production would add)
 
 I want to be straight about what this is: a working **audit tool you run on an export**, not a hands-off system.
 
@@ -195,7 +195,7 @@ I want to be straight about what this is: a working **audit tool you run on an e
 - Re-engage tasks or sequences created on the due date, owned by the right rep
 - A feedback loop so reviewer corrections tune the signals and taxonomy over time
 
-## 📁 What's in the repo
+## What's in the repo
 
 ```
 closed-lost-reason-agent/

@@ -1,4 +1,4 @@
-# 🔍 Closed-Lost Reason Agent
+# Closed-Lost Reason Agent
 
 **Find out why you really lost each deal, not just what the rep picked in the dropdown.**
 
@@ -6,7 +6,7 @@
 
 ---
 
-## 🧠 The pain point
+## The pain point
 
 Every quarter someone asks "why are we losing?" and RevOps pulls the Closed Lost Reason report. Half of it says *Price*, a chunk says *Other*, and the notes underneath tell a different story. Buyer interviews are the gold standard, but most teams can only afford a handful, so this gets the most out of the data you already have.
 
@@ -15,7 +15,7 @@ Every quarter someone asks "why are we losing?" and RevOps pulls the Closed Lost
 
 ---
 
-## ✨ What it does
+## What it does
 
 - **Audited loss reason for every deal:** reads rep notes, competitor, stage, contact count and last activity, then picks one of 8 actionable buckets
 - **Picklist vs notes check:** flags deals where the dropdown contradicts the rep's own notes, e.g. *Price* picked but the notes say *went with Gong*
@@ -26,7 +26,7 @@ Every quarter someone asks "why are we losing?" and RevOps pulls the Closed Lost
 
 ---
 
-## 🗺 Where each step runs
+## Where each step runs
 
 1. **GitHub** holds the code. Clone it or click **Code → Download ZIP**.
 2. **Terminal** is where you run it on your closed-lost export: `python agent.py --input your_export.csv`.
@@ -37,7 +37,7 @@ Every quarter someone asks "why are we losing?" and RevOps pulls the Closed Lost
 
 ---
 
-## 🚀 Quick start
+## Quick start
 
 ```bash
 git clone https://github.com/rubianaseem/closed-lost-reason-agent.git
@@ -51,7 +51,7 @@ Use your own export with `python agent.py --input ~/Downloads/closed_lost_deals_
 
 ---
 
-## 📟 Example output
+## Example output
 
 On `sample_closed_lost_deals.csv` (8 fictional deals), with no API key:
 
@@ -68,7 +68,7 @@ SUMMARY
 
 ---
 
-## 📚 More
+## More
 
 - [SETUP.md](SETUP.md): Claude, exporting your real closed-lost deals, putting the audited reason back in your CRM, extending it, troubleshooting
 - [docs/DETAILS.md](docs/DETAILS.md): all the pain-point quotes, full feature list and example output, cost, stack swap table, customising, how this runs today vs production, and what's in the repo
